@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>[insert title]</title>
- 
+    <title> Quiz me </title>
+    <script src="enter.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -31,6 +31,32 @@ body{
     position: absolute;
     border-radius: 50%;
 }
+
+.background .other {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.other:first-child {
+    background: linear-gradient(
+        #8a3294, 
+        #ec9af5
+    );
+    left: -150px;
+    top: -150px;
+}
+
+.other:last-child {
+    background: linear-gradient(
+        #8a3294, 
+        #ec9af5
+    );
+    left: -30px;
+    bottom: -80px;
+}
+
 .shape:first-child{
     background: linear-gradient(
         #1845ad,
@@ -48,6 +74,7 @@ body{
     right: -30px;
     bottom: -80px;
 }
+
 form{
     height: 520px;
     width: 400px;
@@ -126,23 +153,25 @@ button{
 }
 
 </style>
-</head>
+</head> 
 <body>
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
     <form>
-        <h3>[insert title]</h3>
+        <h3 class="title" id="title"> Quiz me</h3>
 
         <label for="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
-        <button class="transparent-button"> Forgot password?</button>
-        <button class="transparent-button"> Don't have an account? Sign up.</button>
-        <button class="regular-button"> Log In</button>
+        <input type="text" placeholder="Password" id="password">
+        <button class="transparent-button" id="forgot"> Forgot password?</button>
+        <button class="transparent-button" id="new"> Don't have an account? Sign up.</button>
+        <button onclick="logIn()" type="button" class="regular-button" id="log"> Log In </button>
+        <script>
+        </script> 
     </form>
 </body>
 </html>
